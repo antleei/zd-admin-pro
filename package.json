@@ -1,0 +1,69 @@
+{
+  "name": "zd-admin-pro",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@7.8.0",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "build:test": "vite build --mode test",
+    "build:preview": "vite build --mode preview",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:lint-staged": "lint-staged",
+    "typecheck": "vue-tsc --noEmit --skipLibCheck",
+    "up": "taze major -I",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@vueuse/core": "^9.2.0",
+    "axios": "^0.27.2",
+    "element-plus": "^2.2.16",
+    "mockjs": "^1.1.0",
+    "nprogress": "^0.2.0",
+    "path-browserify": "^1.0.1",
+    "pinia": "^2.0.22",
+    "vue": "^3.2.38",
+    "vue-i18n": "^9.2.2",
+    "vue-router": "^4.1.5"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.26.3",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@iconify-json/carbon": "^1.1.7",
+    "@iconify-json/ep": "^1.1.7",
+    "@intlify/vite-plugin-vue-i18n": "^6.0.1",
+    "@types/node": "^18.7.15",
+    "@types/nprogress": "^0.2.0",
+    "@vitejs/plugin-vue": "^3.1.0",
+    "eslint": "^8.23.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "pnpm": "^7.11.0",
+    "sass": "^1.54.8",
+    "taze": "^0.8.0",
+    "typescript": "^4.8.2",
+    "unplugin-auto-import": "^0.11.2",
+    "unplugin-icons": "^0.14.9",
+    "unplugin-vue-components": "^0.22.4",
+    "vite": "^3.1.0",
+    "vite-plugin-mock": "^2.9.6",
+    "vite-plugin-use-modules": "^1.3.1",
+    "vite-plugin-vue-layouts": "^0.7.0",
+    "vue-tsc": "^0.40.10"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "rollup"
+      ]
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,vue}": [
+      "eslint --fix"
+    ]
+  }
+}
