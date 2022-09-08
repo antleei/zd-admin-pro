@@ -21,10 +21,18 @@ const { count, inc, dec } = useCounter(props.initial)
 .inc,.dec {
     width: 30px;
     height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid #000;
     border-radius: 4px;
     background-color: #fff;
     cursor: pointer;
     margin: 12px;
+
+    .dark & {
+        border-color: var(--dark-300);
+        background-color: var(--dark-300);
+    }
 }
 </style>
