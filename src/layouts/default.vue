@@ -24,6 +24,7 @@ const tabsStore = useTabsStore()
                 <TabBar />
                 <div class="main-wrapper">
                     <RouterView v-slot="{ Component, route }">
+                        <!-- Tips: 如果不使用标签页 去除includes即可 -->
                         <template v-if="Component">
                             <component
                                 :is="Component"
