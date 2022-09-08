@@ -3,7 +3,7 @@ export default {
     'menu.dashboard.workplace': 'Workplace',
     'menu.dashboard.monitor': 'Monitor',
     'menu.list': 'List',
-    'menu.list.searchList': 'Search List',
+    'menu.list.searchTable': 'Search Table',
     'menu.list.cardList': 'Card List',
     'menu.menu': 'Menu',
     'menu.menu.menu1': 'Menu1',

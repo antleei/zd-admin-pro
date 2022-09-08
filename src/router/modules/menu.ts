@@ -24,7 +24,7 @@ const menuRoutes: AppRouteRecordRaw = {
             children: [
                 {
                     path: 'menu1-1',
-                    name: 'Menu1-1',
+                    name: 'Menu11',
                     component: () => import('@/pages/menu/menu1/menu1-1/index.vue'),
                     meta: {
                         title: 'menu.menu.menu1.menu1-1',
@@ -34,7 +34,7 @@ const menuRoutes: AppRouteRecordRaw = {
                 },
                 {
                     path: 'menu1-2',
-                    name: 'Menu1-2',
+                    name: 'Menu12',
                     component: () => import('@/pages/menu/menu1/menu1-2/index.vue'),
                     redirect: '/menu/menu1/menu1-2/menu1-2-1',
                     meta: {
@@ -45,7 +45,7 @@ const menuRoutes: AppRouteRecordRaw = {
                     children: [
                         {
                             path: 'menu1-2-1',
-                            name: 'Menu1-2-1',
+                            name: 'Menu121',
                             component: () => import('@/pages/menu/menu1/menu1-2/menu1-2-1/index.vue'),
                             meta: {
                                 title: 'menu.menu.menu1.menu1-2.menu1-2-1',
@@ -55,7 +55,7 @@ const menuRoutes: AppRouteRecordRaw = {
                         },
                         {
                             path: 'menu1-2-2',
-                            name: 'Menu1-2-2',
+                            name: 'Menu122',
                             component: () => import('@/pages/menu/menu1/menu1-2/menu1-2-2/index.vue'),
                             meta: {
                                 title: 'menu.menu.menu1.menu1-2.menu1-2-2',
@@ -67,7 +67,7 @@ const menuRoutes: AppRouteRecordRaw = {
                 },
                 {
                     path: 'menu1-3',
-                    name: 'Menu1-3',
+                    name: 'Menu13',
                     component: () => import('@/pages/menu/menu1/menu1-3/index.vue'),
                     meta: {
                         title: 'menu.menu.menu1.menu1-3',

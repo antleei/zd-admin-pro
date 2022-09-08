@@ -4,7 +4,7 @@ export default {
     'menu.dashboard.monitor': '监控页',
     'menu.list': '列表页',
     'menu.list.cardList': '卡片列表',
-    'menu.list.searchList': '搜索列表',
+    'menu.list.searchTable': '搜索列表',
     'menu.menu': '多级菜单',
     'menu.menu.menu1': '菜单1',
     'menu.menu.menu1.menu1-1': '菜单1-1',

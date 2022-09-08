@@ -43,6 +43,12 @@ const tableData: User[] = [
 ]
 </script>
 
+<script lang="ts">
+export default {
+    name: 'SearchTable',
+}
+</script>
+
 <template>
     <div>
         <div style="margin-bottom: 12px">

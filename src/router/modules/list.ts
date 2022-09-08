@@ -16,7 +16,7 @@ const listRoutes: AppRouteRecordRaw = {
             name: 'SearchTable',
             component: () => import('@/pages/list/search-table/index.vue'),
             meta: {
-                title: 'menu.list.searchList',
+                title: 'menu.list.searchTable',
                 requiresAuth: true,
                 roles: ['*'],
             },

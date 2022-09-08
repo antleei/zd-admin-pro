@@ -3,6 +3,12 @@ const userStore = useUserStore()
 const { t } = useI18n()
 </script>
 
+<script lang="ts">
+export default {
+    name: 'Workplace',
+}
+</script>
+
 <template>
     <div :key="userStore.userInfo.role">
         <el-row>
