@@ -3,6 +3,5 @@
 </script>
 
 <template>
-    <div>卡片列表</div>
-    <Counter :initial="0" />
+    <div>tab-item</div>
 </template>

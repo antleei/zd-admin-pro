@@ -10,6 +10,8 @@ declare module '@vue/runtime-core' {
     AppFooter: typeof import('./components/AppFooter/index.vue')['default']
     AppHeader: typeof import('./components/AppHeader/index.vue')['default']
     AppMenu: typeof import('./components/AppMenu/index.vue')['default']
+    Counter: typeof import('./components/Counter.vue')['default']
+    ElAffix: typeof import('element-plus/es')['ElAffix']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElButton: typeof import('element-plus/es')['ElButton']
@@ -45,6 +47,7 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TabBar: typeof import('./components/TabBar/index.vue')['default']
+    TabItem: typeof import('./components/TabBar/TabItem.vue')['default']
     TheHeader: typeof import('./components/TheHeader/index.vue')['default']
     TheMenu: typeof import('./components/TheMenu/index.vue')['default']
   }

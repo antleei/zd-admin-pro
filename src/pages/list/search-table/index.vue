@@ -53,6 +53,7 @@ const tableData: User[] = [
                 reset all filters
             </el-button>
         </div>
+        <Counter :initial="0" />
 
         <el-table row-key="date" :data="tableData">
             <el-table-column

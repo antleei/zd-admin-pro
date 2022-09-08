@@ -20,7 +20,22 @@ const isLargeScreen = useMediaQuery('(min-width: 1024px)')
             >
                 <TabBar />
                 <div class="main-wrapper">
-                    <RouterView />
+                    <RouterView v-slot="{ Component, route }">
+                        <template v-if="Component">
+                            <component
+                                :is="Component"
+                                v-if="route.meta.ignoreCache"
+                                :key="route.fullPath"
+                            />
+                            <KeepAlive>
+                                <component
+                                    :is="Component"
+                                    v-if="!route.meta.ignoreCache"
+                                    :key="route.fullPath"
+                                />
+                            </KeepAlive>
+                        </template>
+                    </RouterView>
                 </div>
                 <AppFooter />
             </el-main>

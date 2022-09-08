@@ -25,6 +25,7 @@ const { t } = useI18n()
                 所有人能看到
             </el-button>
         </el-row>
+        <Counter :initial="0" />
         <div v-permission="['admin', 'user']" class="card-wrap">
             <el-card>
                 <template #header>

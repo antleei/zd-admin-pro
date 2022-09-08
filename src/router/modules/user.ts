@@ -9,6 +9,7 @@ const userRoutes: AppRouteRecordRaw = {
         icon: 'icon-user',
         requiresAuth: true,
         roles: ['admin'],
+        ignoreCache: true,
     },
 }
 
