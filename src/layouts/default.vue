@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const isLargeScreen = useMediaQuery('(min-width: 1024px)')
+const tabsStore = useTabsStore()
 </script>
 
 <template>
@@ -29,7 +30,7 @@ const isLargeScreen = useMediaQuery('(min-width: 1024px)')
                                 v-if="route.meta.ignoreCache"
                                 :key="route.fullPath"
                             />
-                            <KeepAlive>
+                            <KeepAlive :include="tabsStore.cacheTabList">
                                 <component
                                     :is="Component"
                                     v-if="!route.meta.ignoreCache"

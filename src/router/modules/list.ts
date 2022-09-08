@@ -23,7 +23,7 @@ const listRoutes: AppRouteRecordRaw = {
         },
         {
             path: 'card',
-            name: 'Card',
+            name: 'CardList',
             component: () => import('@/pages/list/card/index.vue'),
             meta: {
                 title: 'menu.list.cardList',

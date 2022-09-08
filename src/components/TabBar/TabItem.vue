@@ -55,16 +55,42 @@ function closeAllTabs() {
     tabsStore.closeAllTabs()
 }
 
+function closeLeftTabs() {
+    const copyTabList = [...tabsStore.tabList]
+    const currentRouteIndex = findCurrentRouteIndex()
+
+    copyTabList.splice(1, tabIndex - 1)
+    tabsStore.setTabList(copyTabList)
+
+    if (currentRouteIndex < tabIndex)
+        router.push({ ...tabData })
+}
+
+function closeRightTabs() {
+    const copyTabList = [...tabsStore.tabList]
+    const currentRouteIndex = findCurrentRouteIndex()
+
+    copyTabList.splice(tabIndex + 1)
+    tabsStore.setTabList(copyTabList)
+
+    if (currentRouteIndex > tabIndex)
+        router.push({ ...tabData })
+}
+
+function findCurrentRouteIndex() {
+    return tabsStore.tabList.findIndex(el => el.fullPath === route.fullPath)
+}
+
 function handleActions(action: Actions) {
     switch (action) {
         case Actions.current:
             closeTab(tabIndex)
             break
         case Actions.left:
-            console.log('left')
+            closeLeftTabs()
             break
         case Actions.right:
-            console.log('right')
+            closeRightTabs()
             break
         case Actions.others:
             closeOtherTabs()

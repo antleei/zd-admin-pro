@@ -29,6 +29,9 @@ function formatTab(route: RouteLocationNormalized): TabItem {
 
 export const useTabsStore = defineStore('tabs', () => {
     const tabList = useSessionStorage<TabItem[]>('tabs', [defaultTabs])
+    const cacheTabList = computed(() => {
+        return tabList.value.filter(item => !item.ignoreCache).map(item => item.name)
+    })
 
     function addTab(route: RouteLocationNormalized) {
         if (tabList.value.some(item => item.fullPath === route.fullPath))
@@ -41,12 +44,8 @@ export const useTabsStore = defineStore('tabs', () => {
         tabList.value.splice(index, 1)
     }
 
-    function closeLeftTab(index: number) {
-        tabList.value.splice(1, index - 1)
-    }
-
-    function closeRightTab(index: number) {
-        tabList.value.splice(index + 1)
+    function setTabList(list: TabItem[]) {
+        tabList.value = list
     }
 
     function closeOtherTabs(index: number) {
@@ -57,5 +56,5 @@ export const useTabsStore = defineStore('tabs', () => {
         tabList.value = [defaultTabs]
     }
 
-    return { tabList, addTab, closeTab, closeLeftTab, closeRightTab, closeOtherTabs, closeAllTabs }
+    return { tabList, cacheTabList, addTab, closeTab, setTabList, closeOtherTabs, closeAllTabs }
 })
