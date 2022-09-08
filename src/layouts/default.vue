@@ -12,7 +12,9 @@ const isLargeScreen = useMediaQuery('(min-width: 1024px)')
                 class="layout-aside"
                 :class="{ 'is-collapse': !isLargeScreen }"
             >
-                <AppMenu />
+                <el-scrollbar>
+                    <AppMenu />
+                </el-scrollbar>
             </el-aside>
             <el-main
                 class="layout-main"
