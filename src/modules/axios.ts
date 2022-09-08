@@ -1,7 +1,6 @@
 import axios from 'axios'
 import type { AxiosRequestConfig, AxiosResponse } from 'axios'
 import { ElMessage } from 'element-plus'
-import { useUserStore } from '@/store'
 
 export interface HttpResponse<T = unknown> {
     code: number

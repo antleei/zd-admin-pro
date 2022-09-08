@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { FormInstance, FormRules } from 'element-plus'
 import { ElMessage } from 'element-plus'
-import { useUserStore } from '@/store'
 
 const isLargeScreen = useMediaQuery('(min-width: 1024px)')
 

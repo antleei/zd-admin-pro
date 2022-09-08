@@ -1,5 +1,4 @@
 import type { LocationQueryRaw, Router } from 'vue-router'
-import { useUserStore } from '@/store'
 import { isLogin } from '@/utils/auth'
 
 const whiteList = ['/login']

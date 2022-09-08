@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ElMessage } from 'element-plus'
-import { useUserStore } from '@/store'
 
 const { isFullscreen, toggle } = useFullscreen()
 const userStore = useUserStore()
