@@ -28,32 +28,34 @@ function formatTab(route: RouteLocationNormalized): TabItem {
 }
 
 export const useTabsStore = defineStore('tabs', () => {
-    const tabList = useSessionStorage<TabItem[]>('tabs', [defaultTabs])
+    const tabs = useSessionStorage<TabItem[]>('tabs', [defaultTabs])
+
+    const tabList = computed(() => tabs.value)
     const cacheTabList = computed(() => {
-        return tabList.value.filter(item => !item.ignoreCache).map(item => item.name)
+        return tabs.value.filter(item => !item.ignoreCache).map(item => item.name)
     })
 
     function addTab(route: RouteLocationNormalized) {
-        if (tabList.value.some(item => item.fullPath === route.fullPath))
+        if (tabs.value.some(item => item.fullPath === route.fullPath))
             return
 
-        tabList.value.push(formatTab(route))
+        tabs.value.push(formatTab(route))
     }
 
     function closeTab(index: number) {
-        tabList.value.splice(index, 1)
+        tabs.value.splice(index, 1)
     }
 
     function setTabList(list: TabItem[]) {
-        tabList.value = list
+        tabs.value = list
     }
 
     function closeOtherTabs(index: number) {
-        tabList.value = index === 0 ? [defaultTabs] : [defaultTabs, tabList.value[index]]
+        tabs.value = index === 0 ? [defaultTabs] : [defaultTabs, tabs.value[index]]
     }
 
     function closeAllTabs() {
-        tabList.value = [defaultTabs]
+        tabs.value = [defaultTabs]
     }
 
     return { tabList, cacheTabList, addTab, closeTab, setTabList, closeOtherTabs, closeAllTabs }

@@ -5,11 +5,13 @@ import type { UserState } from '@/types/user'
 import { clearToken, getToken, setToken } from '@/utils/auth'
 
 export const useUserStore = defineStore('user', () => {
-    const userInfo = ref<UserState>({
+    const userData = ref<UserState>({
         name: '',
         avatar: '',
         role: '',
     })
+
+    const userInfo = computed(() => userData.value)
 
     /**
      * 切换角色
@@ -42,7 +44,7 @@ export const useUserStore = defineStore('user', () => {
     async function info() {
         const res = await getUserInfo(getToken())
 
-        userInfo.value = res.data
+        userData.value = res.data
     }
 
     /**
@@ -55,12 +57,12 @@ export const useUserStore = defineStore('user', () => {
     }
 
     function reset() {
-        userInfo.value = {
+        userData.value = {
             name: '',
             avatar: '',
             role: '',
         }
     }
 
-    return { info, login, logout, switchRoles, userInfo, reset }
+    return { userInfo, info, login, logout, switchRoles, reset }
 })
