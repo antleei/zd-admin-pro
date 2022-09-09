@@ -65,7 +65,9 @@ export default defineConfig({
             dts: 'src/components.d.ts',
         }),
 
-        Icons(),
+        Icons({
+            autoInstall: true,
+        }),
 
         // https://github.com/vbenjs/vite-plugin-mock
         viteMockServe({
