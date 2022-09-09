@@ -75,6 +75,10 @@ export default defineConfig({
             ignore: /^\_/,
             localEnabled: true,
             prodEnabled: false,
+            injectCode: `
+                import { setupProdMockServer } from '../mock/_createProductionServer';
+                setupProdMockServer();
+            `,
         }),
 
         // https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n
