@@ -3,6 +3,7 @@ import { ElMessage } from 'element-plus'
 
 const { isFullscreen, toggle } = useFullscreen()
 const userStore = useUserStore()
+const appStore = useAppStore()
 const router = useRouter()
 const { t, locale } = useI18n()
 
@@ -62,7 +63,7 @@ function toggleLocales() {
                 <button
                     v-permission="['admin']"
                     class="icon-btn"
-                    @click="router.push('/user')"
+                    @click="appStore.toggleGlobalConfigVisible(true)"
                 >
                     <i-ep-setting />
                 </button>

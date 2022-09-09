@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const isLargeScreen = useMediaQuery('(min-width: 1024px)')
 const tabsStore = useTabsStore()
+const appStore = useAppStore()
 </script>
 
 <template>
@@ -21,7 +22,7 @@ const tabsStore = useTabsStore()
                 class="layout-main"
                 :class="{ 'is-collapse': !isLargeScreen }"
             >
-                <TabBar />
+                <TabBar v-if="appStore.getGlobalConfig.showTabBar" />
                 <div class="main-wrapper">
                     <RouterView v-slot="{ Component, route }">
                         <!-- Tips: 如果不使用标签页 去除includes即可 -->
@@ -41,7 +42,7 @@ const tabsStore = useTabsStore()
                         </template>
                     </RouterView>
                 </div>
-                <AppFooter />
+                <AppFooter v-if="appStore.getGlobalConfig.showFooter" />
             </el-main>
         </el-container>
     </el-container>

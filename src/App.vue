@@ -11,5 +11,6 @@ const currentLocale = computed(() => {
 <template>
     <el-config-provider :locale="currentLocale">
         <RouterView />
+        <GlobalConfig />
     </el-config-provider>
 </template>
