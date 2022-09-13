@@ -163,10 +163,14 @@ export default {
 
 <style lang="scss" scoped>
 .pagination-wrap {
-    background-color: var(--el-fill-color-blank);
+    background-color: #fff;
     height: 48px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    .dark & {
+        background-color: var(--dark-800);
+    }
 }
 </style>
