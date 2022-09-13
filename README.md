@@ -44,6 +44,10 @@ export NVM_DIR="$HOME/.nvm"
 
 - ⚡️ [Vue 3](https://github.com/vuejs/vue-next), [Vite 3](https://github.com/vitejs/vite), [pnpm](https://pnpm.js.org/)
 
+- 🔥 使用 [`<script setup>` 语法](https://github.com/vuejs/rfcs/pull/227)
+
+- 🤙🏻 默认开启 [响应性语法糖](https://vuejs.org/guide/extras/reactivity-transform.html)
+
 - 📑 [布局系统](https://github.com/JohnCampionJr/vite-plugin-vue-layouts)
 
 - 📥 [API 自动加载](https://github.com/antfu/unplugin-auto-import) - 直接使用 Composition API 无需引入
@@ -52,16 +56,7 @@ export NVM_DIR="$HOME/.nvm"
 
 - 🍍 [使用 Pinia 的状态管理](https://pinia.vuejs.org/)
 
-- 🎨 [UnoCSS](https://github.com/unocss/unocss) - 原子化 CSS 引擎
-
-- 😃 [iconfont](https://www.iconfont.cn/)
-
-- 🌍 [I18n 国际化开箱即用](https://vue-i18n.intlify.dev/) WIP
-
-- 🔥 使用 [`<script setup>` 语法](https://github.com/vuejs/rfcs/pull/227)
-
-- 🤙🏻 默认开启 [响应性语法糖](https://vuejs.org/guide/extras/reactivity-transform.html)
-
+- 🌍 [I18n 国际化开箱即用](https://vue-i18n.intlify.dev/)
 
 ## 运行
 
