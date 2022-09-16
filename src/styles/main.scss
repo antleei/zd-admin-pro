@@ -1,36 +1,9 @@
 @use './reset.scss';
 @use './iconfont.css';
+@use './vars.scss';
+@use './element-reset.scss';
 @use 'element-plus/theme-chalk/dark/css-vars.css';
 @use 'element-plus/theme-chalk/src/message.scss';
-@use './element-reset.scss';
-
-:root {
-    --theme-color: #2978FF;
-
-    --gray-50: #f9fafb;
-    --gray-100: #f3f4f6;
-    --gray-200: #e5e7eb;
-    --gray-300: #d1d5db;
-    --gray-400: #9ca3af;
-    --gray-500: #6b7280;
-    --gray-600: #4b5563;
-    --gray-700: #374151;
-    --gray-800: #1f2937;
-    --gray-900: #111827;
-
-    --dark-main: #121212;
-    --dark-50: #4a4a4a;
-    --dark-100: #3c3c3c;
-    --dark-200: #323232;
-    --dark-300: #2d2d2d;
-    --dark-400: #222222;
-    --dark-500: #1f1f1f;
-    --dark-600: #1c1c1e;
-    --dark-700: #1b1b1b;
-    --dark-800: #181818;
-    --dark-900: #0f0f0f;
-}
-
 
 html,
 body,
