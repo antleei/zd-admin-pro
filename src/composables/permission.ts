@@ -12,20 +12,5 @@ export default function usePermission() {
                 || route.meta?.roles?.includes(userStore.userInfo.role)
             )
         },
-        findFirstPermissionRoute(_routers: any, role = 'admin') {
-            const cloneRouters = [..._routers]
-            while (cloneRouters.length) {
-                const firstElement = cloneRouters.shift()
-                if (
-                    firstElement?.meta?.roles?.find((el: string[]) => {
-                        return el.includes('*') || el.includes(role)
-                    })
-                )
-                    return { name: firstElement.name }
-                if (firstElement?.children)
-                    cloneRouters.push(...firstElement.children)
-            }
-            return null
-        },
     }
 }
