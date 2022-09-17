@@ -9,8 +9,8 @@ const userStore = useUserStore()
 
 const ruleFormRef = $ref<FormInstance>()
 const loginForm = reactive({
-    username: '',
-    password: '',
+    username: 'admin',
+    password: 'admin',
 })
 
 const rules = reactive<FormRules>({
