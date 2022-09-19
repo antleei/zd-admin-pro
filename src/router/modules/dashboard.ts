@@ -8,6 +8,7 @@ const dashboardRoutes: AppRouteRecordRaw = {
         icon: 'icon-dashboard',
         requiresAuth: true,
         roles: ['*'],
+        sort: 0,
     },
     redirect: '/dashboard/workplace',
     children: [

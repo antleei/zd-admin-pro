@@ -20,5 +20,7 @@ declare module 'vue-router' {
     hideTransition?: boolean;
     // 过渡动画名称
     transitionName?: string;
+    // 排序
+    sort?: number;
   }
 }

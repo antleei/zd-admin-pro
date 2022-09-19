@@ -7,7 +7,12 @@ export function useMenuTree() {
     const permission = usePermission()
 
     const menuTree = computed(() => {
-        const copyRouter = JSON.parse(JSON.stringify(appRoutes))
+        const routerCopy = JSON.parse(JSON.stringify(appRoutes))
+
+        // 按照sort排序
+        routerCopy.sort((a: RouteRecordRaw, b: RouteRecordRaw) => {
+            return (a.meta?.sort || 0) - (b.meta?.sort || 0)
+        })
 
         function travel(_routes: RouteRecordRaw[], layer: number) {
             if (!_routes)
@@ -49,7 +54,7 @@ export function useMenuTree() {
             })
             return collector.filter(Boolean)
         }
-        return travel(copyRouter, 0)
+        return travel(routerCopy, 0)
     })
 
     return {

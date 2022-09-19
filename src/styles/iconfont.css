@@ -13,6 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-feature:before {
+  content: "\ebb7";
+}
+
 .icon-user:before {
   content: "\ea94";
 }

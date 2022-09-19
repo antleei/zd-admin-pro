@@ -8,6 +8,7 @@ const listRoutes: AppRouteRecordRaw = {
         icon: 'icon-list',
         requiresAuth: true,
         roles: ['*'],
+        sort: 1,
     },
     redirect: '/list/search-table',
     children: [

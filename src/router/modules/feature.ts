@@ -5,9 +5,10 @@ const featureRoutes: AppRouteRecordRaw = {
     name: 'Feature',
     meta: {
         title: 'menu.feature',
-        icon: 'icon-list',
+        icon: 'icon-feature',
         requiresAuth: true,
         roles: ['*'],
+        sort: 2,
     },
     redirect: '/feature/editor',
     children: [

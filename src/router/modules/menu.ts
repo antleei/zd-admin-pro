@@ -8,6 +8,7 @@ const menuRoutes: AppRouteRecordRaw = {
         icon: 'icon-menu',
         requiresAuth: true,
         roles: ['*'],
+        sort: 3,
     },
     redirect: '/menu/menu1',
     children: [

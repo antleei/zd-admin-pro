@@ -11,6 +11,7 @@ const userRoutes: AppRouteRecordRaw = {
         roles: ['admin'],
         ignoreCache: true,
         transitionName: 'el-fade-in',
+        sort: 4,
     },
 }
 

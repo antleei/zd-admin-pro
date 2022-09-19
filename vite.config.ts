@@ -46,8 +46,9 @@ export default defineConfig({
             resolvers: [
                 ElementPlusResolver(),
                 // 自动导入图标组件
-                IconsResolver(),
-            ],
+                IconsResolver({
+                    prefix: 'Icon',
+                })],
             dts: 'src/auto-imports.d.ts',
         }),
 
