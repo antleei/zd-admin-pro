@@ -1,3 +1,3 @@
 export default {
-    'system.switchLocalTips': 'Switch language success: {locale}',
+    'system.switchLocalTips': 'Switch language success',
 }

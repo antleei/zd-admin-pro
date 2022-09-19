@@ -38,7 +38,7 @@ export default {
                     </div>
                 </template>
                 <div v-for="o in 4" :key="o" class="list-item">
-                    {{ t('workplace.card.list', { index: o }) }}
+                    {{ t('workplace.card.list') }} {{ o }}
                 </div>
             </el-card>
         </div>
@@ -50,7 +50,7 @@ export default {
                     </div>
                 </template>
                 <div v-for="o in 4" :key="o" class="list-item">
-                    {{ t('workplace.card.list', { index: o }) }}
+                    {{ t('workplace.card.list') }} {{ o }}
                 </div>
             </el-card>
         </div>
@@ -62,7 +62,7 @@ export default {
                     </div>
                 </template>
                 <div v-for="o in 4" :key="o" class="list-item">
-                    {{ t('workplace.card.list', { index: o }) }}
+                    {{ t('workplace.card.list') }} {{ o }}
                 </div>
             </el-card>
         </div>
@@ -74,7 +74,7 @@ export default {
                     </div>
                 </template>
                 <div v-for="o in 4" :key="o" class="list-item">
-                    {{ t('workplace.card.list', { index: o }) }}
+                    {{ t('workplace.card.list') }} {{ o }}
                 </div>
             </el-card>
         </div>
@@ -86,7 +86,7 @@ export default {
                     </div>
                 </template>
                 <div v-for="o in 4" :key="o" class="list-item">
-                    {{ t('workplace.card.list', { index: o }) }}
+                    {{ t('workplace.card.list') }} {{ o }}
                 </div>
             </el-card>
         </div>
@@ -98,7 +98,7 @@ export default {
                     </div>
                 </template>
                 <div v-for="o in 4" :key="o" class="list-item">
-                    {{ t('workplace.card.list', { index: o }) }}
+                    {{ t('workplace.card.list') }} {{ o }}
                 </div>
             </el-card>
         </div>
@@ -110,7 +110,7 @@ export default {
                     </div>
                 </template>
                 <div v-for="o in 4" :key="o" class="list-item">
-                    {{ t('workplace.card.list', { index: o }) }}
+                    {{ t('workplace.card.list') }} {{ o }}
                 </div>
             </el-card>
         </div>
@@ -122,7 +122,7 @@ export default {
                     </div>
                 </template>
                 <div v-for="o in 4" :key="o" class="list-item">
-                    {{ t('workplace.card.list', { index: o }) }}
+                    {{ t('workplace.card.list') }} {{ o }}
                 </div>
             </el-card>
         </div>
@@ -134,7 +134,7 @@ export default {
                     </div>
                 </template>
                 <div v-for="o in 4" :key="o" class="list-item">
-                    {{ t('workplace.card.list', { index: o }) }}
+                    {{ t('workplace.card.list') }} {{ o }}
                 </div>
             </el-card>
         </div>

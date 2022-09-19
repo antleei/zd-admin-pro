@@ -32,7 +32,7 @@ function toggleLocales() {
     locale.value = locale.value === 'zh-CN' ? 'en' : 'zh-CN'
     localStorage.setItem('locale', locale.value)
 
-    ElMessage.success(t('system.switchLocalTips', { locale: locale.value }))
+    ElMessage.success(`${t('system.switchLocalTips')}：${locale.value}`)
 }
 </script>
 
