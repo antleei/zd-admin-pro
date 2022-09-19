@@ -5,6 +5,8 @@ export default {
 </script>
 
 <template>
-    <div>菜单1-2🍋🍋🍋</div>
-    <RouterView />
+    <div>
+        <div>菜单1-2🍋🍋🍋</div>
+        <RouterView />
+    </div>
 </template>

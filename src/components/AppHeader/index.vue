@@ -38,7 +38,10 @@ function toggleLocales() {
 
 <template>
     <div class="app-header">
-        <h1 class="app-logo">
+        <h1
+            class="app-logo"
+            @click="router.push('/')"
+        >
             <img src="/src/assets/images/logo.svg" alt="">
             <div class="app-title">
                 Zd Admin Pro
@@ -110,6 +113,7 @@ function toggleLocales() {
         display: flex;
         align-items: center;
         gap: 8px;
+        cursor: pointer;
 
         img {
             width: 32px;

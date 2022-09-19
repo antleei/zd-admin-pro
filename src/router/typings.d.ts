@@ -16,5 +16,9 @@ declare module 'vue-router' {
     hideChildrenInMenu?: boolean; 
     // 是否忽略缓存
     ignoreCache?: boolean; 
+    // 不使用过渡动画
+    hideTransition?: boolean;
+    // 过渡动画名称
+    transitionName?: string;
   }
 }

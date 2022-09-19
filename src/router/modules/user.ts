@@ -10,6 +10,7 @@ const userRoutes: AppRouteRecordRaw = {
         requiresAuth: true,
         roles: ['admin'],
         ignoreCache: true,
+        transitionName: 'el-fade-in',
     },
 }
 

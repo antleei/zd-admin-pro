@@ -1,7 +1,17 @@
 <script setup lang="ts">
+import type { RouteLocationNormalizedLoaded } from 'vue-router'
+
 const isLargeScreen = useMediaQuery('(min-width: 1024px)')
 const tabsStore = useTabsStore()
 const appStore = useAppStore()
+
+const transitionName = computed(() => {
+    return (route: RouteLocationNormalizedLoaded) => {
+        if (route.meta?.hideTransition)
+            return ''
+        return route.meta?.transitionName || 'fade-transform'
+    }
+})
 </script>
 
 <template>
@@ -25,20 +35,19 @@ const appStore = useAppStore()
                 <TabBar v-if="appStore.getGlobalConfig.showTabBar" />
                 <div class="main-wrapper">
                     <RouterView v-slot="{ Component, route }">
-                        <!-- Tips: 如果不使用标签页 去除includes即可 -->
                         <template v-if="Component">
-                            <component
-                                :is="Component"
-                                v-if="route.meta.ignoreCache"
-                                :key="route.fullPath"
-                            />
-                            <KeepAlive :include="tabsStore.cacheTabList">
-                                <component
-                                    :is="Component"
-                                    v-if="!route.meta.ignoreCache"
-                                    :key="route.fullPath"
-                                />
-                            </KeepAlive>
+                            <Transition
+                                mode="out-in"
+                                appear
+                                :name="transitionName(route)"
+                            >
+                                <KeepAlive :include="tabsStore.cacheTabList">
+                                    <component
+                                        :is="Component"
+                                        :key="route.fullPath"
+                                    />
+                                </KeepAlive>
+                            </Transition>
                         </template>
                     </RouterView>
                 </div>
@@ -79,6 +88,7 @@ const appStore = useAppStore()
         position: fixed;
         top: 0;
         left: 0;
+        z-index: 99;
         padding-top: 60px;
         transition: width 0.3s ease-in-out;
 

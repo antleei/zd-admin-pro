@@ -29,6 +29,7 @@ const dashboardRoutes: AppRouteRecordRaw = {
                 title: 'menu.dashboard.monitor',
                 requiresAuth: true,
                 roles: ['admin'],
+                hideTransition: true,
             },
         },
     ],

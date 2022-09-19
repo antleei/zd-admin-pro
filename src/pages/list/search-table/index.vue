@@ -60,105 +60,107 @@ export default {
 </script>
 
 <template>
-    <el-form
-        class="filter"
-        :model="filterData"
-    >
-        <el-row :gutter="24">
-            <el-col v-bind="formLayout">
-                <el-form-item
-                    label="姓名"
-                >
-                    <el-input
-                        v-model="filterData.name"
-                        placeholder="请输入搜索内容"
-                        clearable
-                    />
-                </el-form-item>
-            </el-col>
-            <el-col v-bind="formLayout">
-                <el-form-item
-                    label="状态"
-                >
-                    <el-select
-                        v-model="filterData.status"
-                        placeholder="请选择"
-                        clearable
-                    >
-                        <el-option
-                            v-for="item in statusList"
-                            :key="item.value"
-                            :label="item.label"
-                            :value="item.value"
-                        />
-                    </el-select>
-                </el-form-item>
-            </el-col>
-            <el-col v-bind="formLayout">
-                <el-form-item
-                    label="时间选择"
-                >
-                    <el-date-picker
-                        v-model="dateTimeRange"
-                        type="datetimerange"
-                        range-separator="-"
-                        start-placeholder="开始日期"
-                        end-placeholder="结束日期"
-                        value-format="X"
-                    />
-                </el-form-item>
-            </el-col>
-            <el-col v-bind="formLayout">
-                <el-form-item>
-                    <el-button
-                        type="primary"
-                        @click="generateData(10)"
-                    >
-                        10条数据
-                    </el-button>
-                    <el-button
-                        type="primary"
-                        @click="generateData(100)"
-                    >
-                        100条数据
-                    </el-button>
-                </el-form-item>
-            </el-col>
-        </el-row>
-    </el-form>
     <div>
-        <el-table :data="tableData" style="width: 100%;">
-            <el-table-column
-                label="序号"
-                type="index"
-                width="80"
-                align="center"
-            />
-            <el-table-column
-                prop="name"
-                label="姓名"
-                width="180"
-                align="center"
-            />
-            <el-table-column
-                prop="date"
-                label="创建时间"
-                width="180"
-            />
-            <el-table-column
-                prop="address"
-                label="详细地址"
-            />
-        </el-table>
-    </div>
-    <el-affix :key="tableData.length" position="bottom" :offset="0">
-        <div class="pagination-wrap">
-            <el-pagination
-                layout="total, sizes, prev, pager, next, jumper"
-                :total="1000"
-            />
+        <el-form
+            class="filter"
+            :model="filterData"
+        >
+            <el-row :gutter="24">
+                <el-col v-bind="formLayout">
+                    <el-form-item
+                        label="姓名"
+                    >
+                        <el-input
+                            v-model="filterData.name"
+                            placeholder="请输入搜索内容"
+                            clearable
+                        />
+                    </el-form-item>
+                </el-col>
+                <el-col v-bind="formLayout">
+                    <el-form-item
+                        label="状态"
+                    >
+                        <el-select
+                            v-model="filterData.status"
+                            placeholder="请选择"
+                            clearable
+                        >
+                            <el-option
+                                v-for="item in statusList"
+                                :key="item.value"
+                                :label="item.label"
+                                :value="item.value"
+                            />
+                        </el-select>
+                    </el-form-item>
+                </el-col>
+                <el-col v-bind="formLayout">
+                    <el-form-item
+                        label="时间选择"
+                    >
+                        <el-date-picker
+                            v-model="dateTimeRange"
+                            type="datetimerange"
+                            range-separator="-"
+                            start-placeholder="开始日期"
+                            end-placeholder="结束日期"
+                            value-format="X"
+                        />
+                    </el-form-item>
+                </el-col>
+                <el-col v-bind="formLayout">
+                    <el-form-item>
+                        <el-button
+                            type="primary"
+                            @click="generateData(10)"
+                        >
+                            10条数据
+                        </el-button>
+                        <el-button
+                            type="primary"
+                            @click="generateData(100)"
+                        >
+                            100条数据
+                        </el-button>
+                    </el-form-item>
+                </el-col>
+            </el-row>
+        </el-form>
+        <div>
+            <el-table :data="tableData" style="width: 100%;">
+                <el-table-column
+                    label="序号"
+                    type="index"
+                    width="80"
+                    align="center"
+                />
+                <el-table-column
+                    prop="name"
+                    label="姓名"
+                    width="180"
+                    align="center"
+                />
+                <el-table-column
+                    prop="date"
+                    label="创建时间"
+                    width="180"
+                />
+                <el-table-column
+                    prop="address"
+                    label="详细地址"
+                />
+            </el-table>
         </div>
-    </el-affix>
+        <el-affix :key="tableData.length" position="bottom" :offset="0">
+            <div class="pagination-wrap">
+                <el-pagination
+                    layout="total, sizes, prev, pager, next, jumper"
+                    :total="1000"
+                />
+            </div>
+        </el-affix>
+    </div>
 </template>
 
 <style lang="scss" scoped>
