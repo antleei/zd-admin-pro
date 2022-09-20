@@ -105,7 +105,7 @@ const customAlert = (s: string, t: string) => {
                 style="height: 500px;"
                 :default-config="editorConfig"
                 @on-created="handleCreated"
-                @customAlert="customAlert"
+                @custom-alert="customAlert"
             />
         </div>
     </el-card>
