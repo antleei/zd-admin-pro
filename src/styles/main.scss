@@ -16,6 +16,11 @@ body,
 
 html.dark {
     background: var(--dark-main);
+
+    // wangEditor
+    .wangeditor {
+        filter: invert(0.9) hue-rotate(180deg);
+    }
 }
 
 body.dark {
