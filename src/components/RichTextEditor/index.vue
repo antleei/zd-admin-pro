@@ -102,7 +102,7 @@ const customAlert = (s: string, t: string) => {
             />
             <Editor
                 v-model="valueHtml"
-                style="height: 500px; overflow-y: hidden"
+                style="height: 500px;"
                 :default-config="editorConfig"
                 @on-created="handleCreated"
                 @customAlert="customAlert"
