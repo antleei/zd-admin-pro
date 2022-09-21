@@ -48,6 +48,8 @@ export const lineChartOptions: ECOption = {
         top: '4%',
     },
     toolbox: {
+        top: 12,
+        right: 12,
         feature: {
             saveAsImage: {},
         },
