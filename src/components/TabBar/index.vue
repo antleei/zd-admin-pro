@@ -32,7 +32,7 @@ watch(
 .tab-bar-wrap {
     display: flex;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--main-bg);
     height: 32px;
 
     .tab-bar-scroll {
@@ -44,9 +44,6 @@ watch(
         &::-webkit-scrollbar {
             display: none;
         }
-    }
-    .dark & {
-        background-color: var(--dark-main);
     }
 
     .action-view {

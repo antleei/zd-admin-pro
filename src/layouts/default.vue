@@ -69,22 +69,18 @@ const transitionName = computed(() => {
     .layout-header {
         width: 100%;
         height: 60px;
-        background-color: #fff;
+        background-color: var(--main-bg);
         position: fixed;
         top: 0;
         left: 0;
         z-index: 100;
         padding: 0;
-
-        .dark & {
-            background-color: var(--dark-main);
-        }
     }
 
     .layout-aside {
         width: 220px;
         height: 100%;
-        background-color: #fff;
+        background-color: var(--main-bg);
         position: fixed;
         top: 0;
         left: 0;
@@ -94,9 +90,6 @@ const transitionName = computed(() => {
 
         &.is-collapse {
             width: 64px;
-        }
-        .dark & {
-            background-color: var(--dark-main);
         }
     }
 
