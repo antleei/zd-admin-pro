@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
     AppHeader: typeof import('./components/AppHeader/index.vue')['default']
     AppMenu: typeof import('./components/AppMenu/index.vue')['default']
     Counter: typeof import('./components/Counter.vue')['default']
+    Echarts: typeof import('./components/Echarts/index.vue')['default']
     ElAffix: typeof import('element-plus/es')['ElAffix']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']

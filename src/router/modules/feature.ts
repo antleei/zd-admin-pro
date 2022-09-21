@@ -15,7 +15,7 @@ const featureRoutes: AppRouteRecordRaw = {
         {
             path: 'editor',
             name: 'Editor',
-            component: () => import('@/pages/feature/editor.vue'),
+            component: () => import('@/pages/feature/editor/index.vue'),
             meta: {
                 title: 'menu.feature.editor',
                 requiresAuth: true,
@@ -25,7 +25,7 @@ const featureRoutes: AppRouteRecordRaw = {
         {
             path: 'chart',
             name: 'Chart',
-            component: () => import('@/pages/feature/chart.vue'),
+            component: () => import('@/pages/feature/chart/index.vue'),
             meta: {
                 title: 'menu.feature.chart',
                 requiresAuth: true,
@@ -35,7 +35,7 @@ const featureRoutes: AppRouteRecordRaw = {
         {
             path: 'drag',
             name: 'Drag',
-            component: () => import('@/pages/feature/drag.vue'),
+            component: () => import('@/pages/feature/drag/index.vue'),
             meta: {
                 title: 'menu.feature.drag',
                 requiresAuth: true,
