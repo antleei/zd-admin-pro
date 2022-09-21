@@ -33,11 +33,11 @@ const featureRoutes: AppRouteRecordRaw = {
             },
         },
         {
-            path: 'drag',
-            name: 'Drag',
-            component: () => import('@/pages/feature/drag/index.vue'),
+            path: 'draggable',
+            name: 'Draggable',
+            component: () => import('@/pages/feature/draggable/index.vue'),
             meta: {
-                title: 'menu.feature.drag',
+                title: 'menu.feature.draggable',
                 requiresAuth: true,
                 roles: ['*'],
             },

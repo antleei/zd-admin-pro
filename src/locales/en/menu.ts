@@ -5,7 +5,7 @@ export default {
     'menu.feature': 'Feature',
     'menu.feature.editor': 'Editor',
     'menu.feature.chart': 'Chart',
-    'menu.feature.drag': 'Drag',
+    'menu.feature.draggable': 'Draggable',
     'menu.list': 'List',
     'menu.list.searchTable': 'Search Table',
     'menu.list.cardList': 'Card List',

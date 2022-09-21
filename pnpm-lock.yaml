@@ -25,7 +25,7 @@ specifiers:
   pinia: ^2.0.22
   pnpm: ^7.12.1
   sass: ^1.54.9
-  taze: ^0.8.0
+  taze: ^0.8.1
   typescript: ^4.8.3
   unplugin-auto-import: ^0.11.2
   unplugin-icons: ^0.14.10
@@ -38,6 +38,7 @@ specifiers:
   vue-i18n: ^9.2.2
   vue-router: ^4.1.5
   vue-tsc: ^0.40.13
+  vuedraggable: ^4.1.0
 
 dependencies:
   '@vueuse/core': 9.2.0_vue@3.2.39
@@ -53,6 +54,7 @@ dependencies:
   vue: 3.2.39
   vue-i18n: 9.2.2_vue@3.2.39
   vue-router: 4.1.5_vue@3.2.39
+  vuedraggable: 4.1.0_vue@3.2.39
 
 devDependencies:
   '@antfu/eslint-config': 0.27.0_irgkl5vooow2ydyo6aokmferha
@@ -69,7 +71,7 @@ devDependencies:
   lint-staged: 13.0.3
   pnpm: 7.12.1
   sass: 1.54.9
-  taze: 0.8.0
+  taze: 0.8.1
   typescript: 4.8.3
   unplugin-auto-import: 0.11.2_ddncce744ormlo74xpe4fre3qq
   unplugin-icons: 0.14.10_vite@3.1.3
@@ -174,8 +176,8 @@ packages:
       find-up: 5.0.0
     dev: true
 
-  /@antfu/ni/0.16.3:
-    resolution: {integrity: sha512-/C1N/hORSJp1qJHr4oRqQzmWPqB6S42T4HV4dWhXOllPJkcqQA/L40U55Oc7Gq4Gm9pLeCNZn7YYU1kUK2Ekpg==}
+  /@antfu/ni/0.18.0:
+    resolution: {integrity: sha512-D0eek5EV8wOUpZNVAs/mPyeC5TMWFXqchqCyPiR6Lj5FgmSJw0EpFLqAczHX0O5+Jc07N7NBwBip85Gi1MBJnA==}
     hasBin: true
     dev: true
 
@@ -2039,8 +2041,8 @@ packages:
       object-keys: 1.1.1
     dev: true
 
-  /defu/6.0.0:
-    resolution: {integrity: sha512-t2MZGLf1V2rV4VBZbWIaXKdX/mUcYW0n2znQZoADBkGGxYL8EWqCuCZBmJPJ/Yy9fofJkyuuSuo5GSwo0XdEgw==}
+  /defu/6.1.0:
+    resolution: {integrity: sha512-pOFYRTIhoKujrmbTRhcW5lYQLBXw/dlTwfI8IguF1QCDJOcJzNH1w+YFjxqy6BAuJrClTy6MUE8q+oKJ2FLsIw==}
     dev: true
 
   /delayed-stream/1.0.0:
@@ -2057,8 +2059,8 @@ packages:
     engines: {node: '>= 0.6'}
     dev: true
 
-  /detect-indent/7.0.0:
-    resolution: {integrity: sha512-/6kJlmVv6RDFPqaHC/ZDcU8bblYcoph2dUQ3kB47QqhkUEqXe3VZPELK9BaEMrC73qu+wn0AQ7iSteceN+yuMw==}
+  /detect-indent/7.0.1:
+    resolution: {integrity: sha512-Mc7QhQ8s+cLrnUfU/Ji94vG/r8M26m8f++vyres4ZoojaRDpZ1eSIh/EpzLNwlWuvzSZ3UbDFspjFvTDXe6e/g==}
     engines: {node: '>=12.20'}
     dev: true
 
@@ -5073,6 +5075,10 @@ packages:
       smart-buffer: 4.2.0
     dev: true
 
+  /sortablejs/1.14.0:
+    resolution: {integrity: sha512-pBXvQCs5/33fdN1/39pPL0NZF20LeRbLQ5jtnheIPN9JQAaufGjKdWduZn4U7wCtVuzKhmRkI0DFYHYRbB2H1w==}
+    dev: false
+
   /source-map-js/1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
@@ -5251,17 +5257,17 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /taze/0.8.0:
-    resolution: {integrity: sha512-3FWGegvt1JB+qfBPEr/9sBhGc2VQmwrGFacvfCllmm+Raw9iDHlWSy/CyIJU+6FsfUrTIhF5X9xT2sUNh4nz8Q==}
+  /taze/0.8.1:
+    resolution: {integrity: sha512-W2ZOGYiH57GFM38gBVE1pMV3TDExuqwqETdWh8xGeAOMMWwSUt6NWZnHw7c1AMhaC8abCikjXe1s2H43h5CieA==}
     hasBin: true
     dependencies:
-      '@antfu/ni': 0.16.3
-      detect-indent: 7.0.0
+      '@antfu/ni': 0.18.0
+      detect-indent: 7.0.1
       libnpmconfig: 1.2.1
       pacote: 13.6.2
       prompts: 2.4.2
       semver: 7.3.7
-      unconfig: 0.3.5
+      unconfig: 0.3.6
       yargs: 17.5.1
     transitivePeerDependencies:
       - bluebird
@@ -5427,11 +5433,11 @@ packages:
       which-boxed-primitive: 1.0.2
     dev: true
 
-  /unconfig/0.3.5:
-    resolution: {integrity: sha512-YMnPPUSfW0pT4Zzy4inM8tRHJZmhH+KcuFW/3qxkLKPhswEw18gQYe1jt57jY6ctFB0fnpiCpQ2Jtkbg4y/IPA==}
+  /unconfig/0.3.6:
+    resolution: {integrity: sha512-JWefWyjLrDAbzs30sFkzcE9YpvAhN9+UPMZBwnNUmaY9X7QhI+wCGP4hoEWfZDzvkP+WIaZDPcMUJjarpxFvKg==}
     dependencies:
       '@antfu/utils': 0.5.2
-      defu: 6.0.0
+      defu: 6.1.0
       jiti: 1.14.0
     dev: true
 
@@ -5796,6 +5802,15 @@ packages:
       '@vue/runtime-dom': 3.2.39
       '@vue/server-renderer': 3.2.39_vue@3.2.39
       '@vue/shared': 3.2.39
+
+  /vuedraggable/4.1.0_vue@3.2.39:
+    resolution: {integrity: sha512-FU5HCWBmsf20GpP3eudURW3WdWTKIbEIQxh9/8GE806hydR9qZqRRxRE3RjqX7PkuLuMQG/A7n3cfj9rCEchww==}
+    peerDependencies:
+      vue: ^3.0.1
+    dependencies:
+      sortablejs: 1.14.0
+      vue: 3.2.39
+    dev: false
 
   /webpack-sources/3.2.3:
     resolution: {integrity: sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==}
