@@ -38,5 +38,9 @@ const isLargeScreen = useMediaQuery('(min-width: 1024px)')
             background-color: var(--dark-600);
         }
     }
+
+    :deep(.el-sub-menu.is-active > .el-sub-menu__title) {
+        color: var(--theme-color);
+    }
 }
 </style>
