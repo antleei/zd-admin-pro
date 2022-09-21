@@ -80,11 +80,6 @@ export const lineChartOptions: ECOption = {
             axisLine: {
                 show: false,
             },
-            splitLine: {
-                lineStyle: {
-                    type: 'dashed',
-                },
-            },
             axisTick: {
                 show: false,
             },

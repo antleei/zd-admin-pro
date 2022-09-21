@@ -38,7 +38,7 @@ export default {
 <style scoped lang="scss">
 .charts-wrapper {
     .el-col {
-        height: 300px;
+        height: 400px;
         margin-bottom: 12px;
 
         .chart-item {
