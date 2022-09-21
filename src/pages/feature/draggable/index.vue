@@ -81,6 +81,10 @@ export default {
             }
             .sortable-chosen, .sortable-ghost {
                 background-color: var(--gray-100);
+
+                .dark & {
+                    background-color: var(--gray-800);
+                }
             }
 
              .sortable-drag {
