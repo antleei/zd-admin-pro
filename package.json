@@ -5,9 +5,9 @@
   "packageManager": "pnpm@7.8.0",
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build",
-    "build:test": "vite build --mode test",
-    "build:preview": "vite build --mode preview",
+    "build": "pnpm typecheck && vite build",
+    "build:test": "pnpm typecheck && vite build --mode test",
+    "build:preview": "pnpm typecheck && vite build --mode preview",
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
