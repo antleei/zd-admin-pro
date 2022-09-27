@@ -42,6 +42,17 @@ const featureRoutes: AppRouteRecordRaw = {
                 roles: ['*'],
             },
         },
+        {
+            path: 'map',
+            name: 'AMap',
+            component: () => import('@/pages/feature/map/index.vue'),
+            meta: {
+                title: 'menu.feature.map',
+                requiresAuth: true,
+                hideInMenu: true,
+                roles: ['*'],
+            },
+        },
     ],
 }
 

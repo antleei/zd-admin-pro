@@ -6,6 +6,7 @@ export default {
     'menu.feature.editor': 'Editor',
     'menu.feature.chart': 'Chart',
     'menu.feature.draggable': 'Draggable',
+    'menu.feature.map': 'Map',
     'menu.list': 'List',
     'menu.list.searchTable': 'Search Table',
     'menu.list.cardList': 'Card List',

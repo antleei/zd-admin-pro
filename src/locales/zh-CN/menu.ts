@@ -6,6 +6,7 @@ export default {
     'menu.feature.editor': '富文本',
     'menu.feature.chart': '图表',
     'menu.feature.draggable': '拖拽',
+    'menu.feature.map': '地图',
     'menu.list': '列表页',
     'menu.list.cardList': '卡片列表',
     'menu.list.searchTable': '搜索列表',
