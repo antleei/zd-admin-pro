@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import AMapLoader from '@amap/amap-jsapi-loader'
 
-let map = shallowRef(null)
+const map = shallowRef(null)
 
 const initMap = () => {
     AMapLoader.load({
@@ -13,7 +13,7 @@ const initMap = () => {
         plugins: [],
     }).then((AMap) => {
         // 设置地图容器id
-        map = new AMap.Map('map-wrapper', {
+        map.value = new AMap.Map('map-wrapper', {
             // 是否为3D地图模式
             viewMode: '3D',
             // 初始化地图级别
