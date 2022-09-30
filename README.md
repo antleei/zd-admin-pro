@@ -75,5 +75,5 @@ pnpm run dev
 
 ## 更新日志和问题
 
-https://blog.cypp.cn/note/vue3.html
+https://blog.cyoo.cn/note/vue3.html
 
