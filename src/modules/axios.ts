@@ -28,7 +28,7 @@ axios.interceptors.request.use((config: AxiosRequestConfig) => {
 })
 
 // 响应拦截器
-axios.interceptors.response.use((response: AxiosResponse<HttpResponse>) => {
+axios.interceptors.response.use((response: AxiosResponse) => {
     const res = response.data
 
     if (res.code !== 1) {
