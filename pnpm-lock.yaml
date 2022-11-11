@@ -8,6 +8,7 @@ specifiers:
   '@iconify-json/carbon': ^1.1.8
   '@iconify-json/ep': ^1.1.7
   '@intlify/vite-plugin-vue-i18n': ^6.0.3
+  '@starset/v-ui': ^1.0.3
   '@types/node': ^18.8.3
   '@types/nprogress': ^0.2.0
   '@vitejs/plugin-vue': ^3.1.2
@@ -46,6 +47,7 @@ specifiers:
 
 dependencies:
   '@amap/amap-jsapi-loader': 1.0.1
+  '@starset/v-ui': 1.0.3
   '@vueuse/core': 9.3.0_vue@3.2.40
   '@wangeditor/editor': 5.1.21
   '@wangeditor/editor-for-vue': 5.1.12_m4nwp4qupl3m2mwvp2ornv5qmq
@@ -745,6 +747,10 @@ packages:
       estree-walker: 2.0.2
       picomatch: 2.3.1
     dev: true
+
+  /@starset/v-ui/1.0.3:
+    resolution: {integrity: sha512-a2Ug3IXEfMd0AdAjcZMezgNAO1Lk7DpFGWwzjUDn2k9K9oZMfSCWUrrWulhqJE7QwLJz5/BGV/Asv18cnx8lpA==}
+    dev: false
 
   /@sxzz/popperjs-es/2.11.7:
     resolution: {integrity: sha512-Ccy0NlLkzr0Ex2FKvh2X+OyERHXJ88XJ1MXtsI9y9fGexlaXaVTPzBCRBwIxFkORuOb+uBqeu+RqnpgYTEZRUQ==}

@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@amap/amap-jsapi-loader": "^1.0.1",
+    "@starset/v-ui": "^1.0.3",
     "@vueuse/core": "^9.3.0",
     "@wangeditor/editor": "^5.1.21",
     "@wangeditor/editor-for-vue": "^5.1.12",

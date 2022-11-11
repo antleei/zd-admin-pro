@@ -20,6 +20,11 @@ export default defineConfig({
     },
     css: {
         devSourcemap: true,
+        preprocessorOptions: {
+            scss: {
+                additionalData: '@use "@/styles/element/index.scss" as *;',
+            },
+        },
     },
     plugins: [
         Vue({
@@ -44,7 +49,9 @@ export default defineConfig({
             dirs: ['src/composables', 'src/store'],
             vueTemplate: true,
             resolvers: [
-                ElementPlusResolver(),
+                ElementPlusResolver({
+                    importStyle: 'sass',
+                }),
                 // 自动导入图标组件
                 IconsResolver({
                     prefix: 'Icon',
@@ -56,7 +63,9 @@ export default defineConfig({
         Components({
             dirs: ['src/components', '**/components/'],
             resolvers: [
-                ElementPlusResolver(),
+                ElementPlusResolver({
+                    importStyle: 'sass',
+                }),
                 // 自动注册图标组件
                 IconsResolver({
                     enabledCollections: ['ep', 'carbon'],
